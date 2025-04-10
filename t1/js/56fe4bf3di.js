@@ -6,7 +6,9 @@
         { id: "button4", suffix: "MVWB7YSD" },
         { id: "button5", suffix: "R1XNMYWZ" },
         { id: "button6", suffix: "AFTZ3XDC" },
-        { id: "button7", suffix: "25P33I5A" }
+        { id: "button7", suffix: "25P33I5A" },
+        { id: "button8", suffix: "P4V3ON6X" },
+        { id: "button9", suffix: "TC81TPWQ" }
     ];
 
     // Función para agregar eventos a los botones
@@ -31,7 +33,7 @@ function getRandomNumber(min, max) {
 
   // Función para actualizar el valor progresivo y el tiempo de espera
   function updateValue() {
-    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 51735193.55; // Valor inicial
+    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 9735193.55; // Valor inicial
     const targetValue = 600000000.00; // Valor objetivo
     const increment = getRandomNumber(39.57, 359.73); // Incremento aleatorio
 
