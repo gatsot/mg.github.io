@@ -33,7 +33,7 @@ function getRandomNumber(min, max) {
 
   // Función para actualizar el valor progresivo y el tiempo de espera
   function updateValue() {
-    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 9735193.55; // Valor inicial
+    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 51735193.55; // Valor inicial
     const targetValue = 600000000.00; // Valor objetivo
     const increment = getRandomNumber(39.57, 359.73); // Incremento aleatorio
 
