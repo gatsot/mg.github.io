@@ -1,0 +1,56 @@
+    // Lista de IDs de botones y sus sufijos únicos
+    const buttons = [
+        { id: "button1", suffix: "SO6DFCQ2" },
+        { id: "button2", suffix: "KX7ZPYCR" },
+        { id: "button3", suffix: "67XBQKJD" },
+        { id: "button4", suffix: "MVWB7YSD" },
+        { id: "button5", suffix: "R1XNMYWZ" },
+        { id: "button6", suffix: "AFTZ3XDC" },
+        { id: "button7", suffix: "25P33I5A" }
+    ];
+
+    // Función para agregar eventos a los botones
+    buttons.forEach(button => {
+        document.getElementById(button.id).addEventListener("click", () => {
+            window.open(`https://cwallet.com/t/${button.suffix}`, "_blank");
+        });
+    });
+
+
+
+
+
+
+
+              // SUMA DE $
+
+// Función para generar un número aleatorio en un rango
+function getRandomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  // Función para actualizar el valor progresivo y el tiempo de espera
+  function updateValue() {
+    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 9735193.55; // Valor inicial
+    const targetValue = 600000000.00; // Valor objetivo
+    const increment = getRandomNumber(39.57, 359.73); // Incremento aleatorio
+
+    // Incrementar el valor actual
+    const newValue = Math.min(currentValue + increment, targetValue);
+
+    // Actualizar el texto con formato de moneda
+    document.getElementById('usdt-raised').innerText = '$' + newValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    
+    // Guardar el nuevo valor en el almacenamiento local
+    localStorage.setItem('usdt-raised', newValue);
+    
+    // Si no hemos alcanzado el valor objetivo, programar la próxima actualización
+    if (newValue < targetValue) {
+      setTimeout(updateValue, getRandomNumber(1100, 2330));
+    }
+  }
+
+  // Llamar a la función inicialmente para comenzar la cuenta progresiva
+  updateValue();
+
+      // FIN SUMA DE $
