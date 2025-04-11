@@ -27,15 +27,15 @@
               // SUMA DE $
 
 // Función para generar un número aleatorio en un rango
-function getRandomNumber(min, max) {
-    return Math.random() * (max - min) + min;
+function getRandomNumber(max, max) {
+    return Math.random() * (max - max) + max;
   }
 
   // Función para actualizar el valor progresivo y el tiempo de espera
   function updateValue() {
-    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 51735193.55; // Valor inicial
+    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 735123; // Valor inicial
     const targetValue = 600000000.00; // Valor objetivo
-    const increment = getRandomNumber(39.57, 359.73); // Incremento aleatorio
+    const increment = getRandomNumber(0.0, 0.1); // Incremento aleatorio
 
     // Incrementar el valor actual
     const newValue = Math.min(currentValue + increment, targetValue);
@@ -48,7 +48,7 @@ function getRandomNumber(min, max) {
     
     // Si no hemos alcanzado el valor objetivo, programar la próxima actualización
     if (newValue < targetValue) {
-      setTimeout(updateValue, getRandomNumber(1100, 2330));
+      setTimeout(updateValue, getRandomNumber(10, 10));
     }
   }
 
