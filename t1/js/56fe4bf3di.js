@@ -33,7 +33,7 @@ function getRandomNumber(max, max) {
 
   // Función para actualizar el valor progresivo y el tiempo de espera
   function updateValue() {
-    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 735123; // Valor inicial
+    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 937023; // Valor inicial
     const targetValue = 600000000.00; // Valor objetivo
     const increment = getRandomNumber(0.0, 0.1); // Incremento aleatorio
 
@@ -41,7 +41,7 @@ function getRandomNumber(max, max) {
     const newValue = Math.min(currentValue + increment, targetValue);
 
     // Actualizar el texto con formato de moneda
-    document.getElementById('usdt-raised').innerText = '$' + newValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    document.getElementById('usdt-raised').innerText = '$' + newValue.toFixed(1).replace(/\d(?=(\d{3})+\.)/g, '$&,');
     
     // Guardar el nuevo valor en el almacenamiento local
     localStorage.setItem('usdt-raised', newValue);
